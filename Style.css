@@ -1,0 +1,46 @@
+body
+{
+  background-color: #36454f;
+}
+p
+{
+  color: white;
+}
+input
+{
+  color: black;
+  font-weight: bold;
+}
+input#quantity
+{
+  width: 25px;
+}
+button
+{
+  color: white;
+}
+label
+{
+  color: white;
+}
+td
+{
+  color: white;
+  padding-right: 20px;
+  border-bottom: white solid 2px;
+}
+td#total
+{
+  background-color: green;
+}
+th
+{
+  color:#FA8072;
+  text-align: left;
+  border-bottom: white solid 2px;
+}
+h2
+{
+  color:white;
+  text-decoration: underline;
+}
