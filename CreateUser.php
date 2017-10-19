@@ -1,5 +1,8 @@
 <?php
-
+//Set style
+echo '<head>
+        <link href="Style.css" rel="stylesheet" type="text/css" />
+      </head>';
 ///Connection Variables
 
 $host="mysql.eecs.ku.edu"; // Host name
@@ -22,12 +25,12 @@ $query = "SELECT user_id FROM Users WHERE user_id='$user_id'";
 $query_results = mysql_query($query);
 if($user_id == "" || $user_id == null)
 {
-  echo "Username cannot be empty. Redirecting in 5 seconds...";
+  echo "<label>Username cannot be empty. Redirecting in 5 seconds...</label>";
   header( "refresh:5;url=CreateUser.html" );
 }
 else if(mysql_num_rows($query_results) != 0)
 {
-  echo "Username is already in the database. Redirecting in 5 seconds...";
+  echo "<label>Username is already in the database. Redirecting in 5 seconds...</lable>";
   header( "refresh:5;url=CreateUser.html" );
 }
 else
@@ -36,12 +39,12 @@ else
   $sql1 = "INSERT INTO $tbl_name (user_id) VALUES ('$user_id')";
   if(mysql_query($sql1))
   {
-    echo "Success. Redirecting in 5 seconds...";
+    echo "<label>Success. Redirecting in 5 seconds...</label>";
     header( "refresh:5;url=CreateUser.html" );
   }
   else
   {
-    echo "Failed to add username. Please try again. Redirecting in 5 seconds...";
+    echo "<label>Failed to add username. Please try again. Redirecting in 5 seconds...</label>";
     header( "refresh:5;url=CreateUser.html" );
   }
 }
