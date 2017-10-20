@@ -22,7 +22,7 @@ $query_results = $mysqli->query($query);
 echo "<table>";
 while($row = $query_results->fetch_assoc())
 {
-  echo "<tr><label><td>" . $row['content'] . "</td></label></tr>";
+  echo '<tr><label><td id ="bottomLine">' . $row['content'] . "</td></label></tr>";
 }
 echo "</table>";
 ?>
