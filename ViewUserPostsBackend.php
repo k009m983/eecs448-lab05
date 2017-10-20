@@ -1,6 +1,6 @@
 <?php
 //Set style
-echo '<head>
+echo '<html><head>
         <link href="Style.css" rel="stylesheet" type="text/css" />
       </head>';
 ///Connection Variables
@@ -11,12 +11,12 @@ $password="P@\$\$word123"; // Mysql password
 $db_name="kmittenburg"; // Database name
 $tbl_name="Posts"; // Table name
 
-$username = $_POST['username'];
+$user = $_POST["username"];
 
 ///Connect to the server
 $mysqli = new mysqli("$host", "$username", "$password", "$db_name")or die("cannot connect");
 
-$query = "SELECT * FROM '$tbl_name' WHERE author_id = '$username'";
+$query = "SELECT * FROM $tbl_name WHERE author_id = '$user'";
 $query_results = $mysqli->query($query);
 
 echo "<table>";
