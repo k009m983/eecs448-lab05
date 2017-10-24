@@ -16,7 +16,7 @@ $mysqli = new mysqli("$host", "$username", "$password", "$db_name")or die("canno
 
 $query = "SELECT * FROM $tbl_name";
 $query_results = $mysqli->query($query);
-
+echo '<a href="AdminHome.html">Back to home...</a><br>';
 echo "<table>";
 while($row = $query_results->fetch_assoc())
 {

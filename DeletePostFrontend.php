@@ -3,6 +3,7 @@
     <link href="Style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <a href="AdminHome.html">Back to home...</a><br>
     <form action="DeletePostBackend.php" method="POST">
       <table>
               <?php

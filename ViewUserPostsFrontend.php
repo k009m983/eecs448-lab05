@@ -4,6 +4,7 @@
     <link href="Style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <a href="AdminHome.html">Back to home...</a><br>
     <form action="ViewUserPostsBackend.php" method="POST">
       <select name="username">
               <?php
